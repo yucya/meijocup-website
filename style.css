@@ -251,6 +251,11 @@
     color: black;
     font-weight:bold;
     font-size: 2vw;
+    text-decoration: none;
+  }
+
+  .news-title:hover{
+    text-decoration: underline;
   }
   
   .news-link {
