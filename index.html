@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <!-- ファビコン -->
+    <link rel="icon" href="website-images/favicon.ico" id="favicon">
+    <link rel="apple-touch-icon" sizes="180x180" href="website-images/apple-touch-icon-180x180.png">
+    
+    <!-- リセットcss -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    
+    <!-- 適応するcss -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>第2回名城CUP公式サイト</title>
+    <meta name="description" content="名城大学の学生団体「なんとかしよまいけ」が開催するキッズランバイク大会「第2回名城CUP」の公式ホームページ">
+    <meta name="viewport" content="width=device-width",initial-scale=1>
+</head>
+<body>
+    
+    <!-- ここはヘッダーについて書く -->
+    <div class="header">
+        <img src="website-images/MEIJO CUP (1)-modified.png" alt="ロゴ" class="header-icon">
+        <span class="icon-name">Meijo CUP</span>
+    </div>
+
+    <!-- ここは上部のグローバルナビについて書く -->
+    <nav class="nav">
+        <ul class="nav__menu">
+            <li class="nav__item">
+                <a class="nav__link" href="/schedule"><!-- タイスケのページリンクを左に入れる -->
+                    <img class="nav__icon" src="website-images/timeschedule.png" alt="タイムスケジュール">
+                    <span>タイムスケジュール</span>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="/players"><!-- 出場選手リストのページリンクを左に入れる -->
+                    <img class="nav__icon" src="website-images/list.png" alt="出場選手リスト">
+                    <span>出場選手リスト</span>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="/race"><!-- レギュレーションのページリンクを左に入れる -->
+                    <img class="nav__icon" src="website-images/combination.png" alt="レギュレーション">
+                    <span>レギュレーション</span>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="/results"><!-- 試合結果のページリンクを左に入れる -->
+                    <img class="nav__icon" src="website-images/result.png" alt="試合結果">
+                    <span>試合結果</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- ここはスライドショーの部分 -->
+    <div id="slideshow-container" >
+    <div id="slideshow">
+        <div id="slide1" class="slide active">
+            <img src="website-images/sample1.JPG" alt="Image 1">
+            <div class="slide-text">
+                <h2>第2回名城CUP</h2>
+                <h2>開催決定!</h2>
+                <h3><p>2024年10月12日(土)</p></h3>
+                <div class="slide-button-container">
+                  <a href="https://www.meijo-u.ac.jp/" class="slide-button">エントリーはこちら！</a> <!-- 横に応募フォームのリンクを貼る -->
+                </div>
+            </div>
+        </div>
+        <div id="slide2" class="slide">
+            <img src="website-images/sample2.jpg" alt="Image 2">
+            <div class="slide-text">
+                <h2>第2回名城CUP</h2>
+                <h2>開催決定!</h2>
+                <h3><p>2024年10月12日(土)</p></h3>
+                <div class="slide-button-container">
+                    <a href="https://www.meijo-u.ac.jp/" class="slide-button">エントリーはこちら！</a> <!-- 横に応募フォームのリンクを貼る -->
+                </div>
+            </div>
+        </div>
+        <div id="slide3" class="slide">
+            <img src="website-images/sample3.jpg" alt="Image 3">
+            <div class="slide-text">
+                <h2>第2回名城CUP</h2>
+                <h2>開催決定!</h2>
+                <h3><p>2024年10月12日(土)</p></h3>
+                <div class="slide-button-container">
+                  <a href="https://www.meijo-u.ac.jp/" class="slide-button">エントリーはこちら！</a> <!-- 横に応募フォームのリンクを貼る -->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('#slideshow .slide');
+        const slideInterval = setInterval(nextSlide,6000); //6秒間隔で切り替わる
+        
+        function nextSlide() {
+    　　　　slides[currentSlide].className = 'slide';
+    　　　　currentSlide = (currentSlide+1)%slides.length;
+    　　　　setTimeout(function() {  /* 透明度の変化が終わった後にアクティブなスライドを切り替える */
+        　　　　slides[currentSlide].className = 'slide active';
+    　　　　}, -200);  /* 0.2秒前からアクティブなスライドを切り替える */
+　　　　}
+    </script>
+
+    <!-- ここはひとことコメントを書く -->
+    <div id="text-container">
+            こちらは名城大学の学生団体「<b>なんとかしよまいけ</b>」が主催するキッズランバイク大会「名城CUP」の第2回大会について情報を発信するホームページです。
+        <br><b>※エントリー開始時期は<b style="color:red;">7月末頃</b>を予定しております。続報にご期待ください！</b></div>
+    </div>
+
+    <!-- ここは最新のニュースについて書く※上から追加すればOK! -->
+    <div class="news-container">
+        <div class="news-header">
+          <div>
+            <h2>お知らせ <span>News</span></h2>
+          </div>
+          <a href="#" class="news-link">一覧へ</a>
+        </div>
+        <div class="news-list">
+          <!-- 最新ニュース1 -->
+          <div class="news-item">
+            <span class="newicon">NEW!</span>
+            <span class="date">2024.07.01</span>
+            <span class="news-title">第2回MeijoCUPWebサイトを開設しました！</span>
+          </div>
+          <!-- 最新ニュース2 -->
+          <!--<div class="news-item">
+            <span class="iconblank">NEW!</span>
+            <span class="date">2024.04.21</span>
+            <span class="news-title">ニューーーーーーーーーーーーーーーーーーーーーーーース</span>
+          </div>-->
+        </div>
+    </div>
+
+    <!-- ここは名城CUP紹介画像を貼り付ける -->
+    <img src="website-images/ボラ協　環境イラスト　2023.jpg"  alt="PDF Image" style="width:100%; height:auto; margin-top:6%; margin-bottom:-1%;">
+
+    <!-- ここはエントリーボタンについて書く -->
+    <div class="entry-button-container">
+      <a href="https://www.meijo-u.ac.jp/" class="entry-button">大会にエントリーする &nbsp;<span class="arrow">→</span></a> <!-- 横に応募フォームのリンクを貼る -->
+    </div>
+
+    <!-- ここは協力団体の紹介について書く -->
+    <div class="headline">ご協力いただいている企業・団体</div>
+    <div class="intro-title">ツール・ド・南砺実行委員会</div>
+    <div class="container">
+      <div class="left-content">
+          <div class="text">&emsp;私たちがこのランバイク大会をプレイベントとして開かせてもらっているツール・ド・南砺というサイクリング大会の実行委員会です。名城カップを開くにあたって多大な支援を頂きました。</div>
+          <div class="image">
+            <img src="website-images/demo1.jpg" alt="ツール・ド・南砺実行委員会の写真">
+          </div>
+      </div>
+      <a href="https://johanacycling.jp/"> <!-- ツール・ド・南砺についてのURLを貼る -->
+      <div class="intro1-button-container">
+        <button>詳しくはこちら</button>
+      </div>
+      </a>
+    </div>
+
+    <div class="intro-title">富山県南砺市</div>
+    <div class="container">
+      <div class="right-content">
+          <div class="text">&emsp;私たち名城大学が南砺市を学生の力で盛り上げるために南砺市からご協力をいただき、さらに南砺市が活性化するように活動していくことを目標として結ばれた協定です。現在は南砺市の地元の祭りやイベントに参加し、地元の人との交流も深まって来ています！</div>
+          <div class="image">
+            <img src="website-images/demo1.jpg" alt="富山県南砺市の写真">
+          </div>
+      </div>
+      <a href="https://www.meijo-u.ac.jp/news/detail_29756.html"> <!-- 南砺市との連携に関するページのリンク -->
+      <div class="intro2-button-container">
+        <button>南砺市との連携について</button>
+      </div>
+      </a>
+    </div>
+
+    <div class="intro-title">合同会社wild runner 様</div>
+    <div class="container">
+      <div class="left-content">
+          <div class="text">&emsp;前回の第1回MEIJO CUP から私たちををサポートしてくださっている団体です！ワイルドランナーは愛知県岡崎市を中心として活動をしており、初心者から上級者まで幅広いレースを開催しています。</div>
+          <div class="image">
+            <img src="website-images/demo1.jpg" alt="合同会社wild runnerの写真">
+          </div>
+      </div>
+      <a href="https://wildrunner-llc.jp/"> <!-- wild runner公式HPのリンク -->
+      <div class="intro3-button-container">
+        <button>wild runner 公式HPはこちら</button>
+      </div>
+      </a>
+    </div>
+
+    <!-- ここからsns＆フッター -->
+    <div class="footer-container">
+
+    <!-- ここはSNSの部分について書く -->
+    <div id="sns-area">
+    <div class="sns-intro">ブログ・SNSについて</div>
+    <div class="sns-container">
+      <a href="https://ameblo.jp/nantokashiyomaike" target="_blank" title="外部サイトに接続　新規ウインドウで開きます" class="sns-link">
+      <div class="sns-item">
+        <img src="website-images/Ameba-blog-icon.png" alt="Amebaブログ">
+        <p class="sns-name">Amebaブログ</p>
+      </div>
+      </a>
+
+      <a href="https://www.instagram.com/nantokashiyomaike" target="_blank" title="新規ウインドウで開きます" class="sns-link">
+      <div class="sns-item">
+        <img src="website-images/Instagram-icon.png" alt="インスタグラム">
+        <p class="sns-name">公式Instagram</p>
+      </div>
+      </a>
+      </div>
+    </div>
+    
+    <!-- ここからフッター -->
+　　<footer>
+      <p class="footer-title">お問い合わせはこちら</p>
+      <p class="footer-text">何かお困りのことがございましたら、お問い合わせボタンからメールを送っていただくか、インスタグラム等のダイレクトメール(DM)から受け付けております。</p>
+      <p class="footer-text">お気軽にご相談ください。</p>
+      <div class="footer-button-container">
+        <a class="footer-button" href="mailto:nantokashiyomaike0609@gmail.com" title="メールアプリが開きます">お問い合わせする</a>
+      </div>
+        <p class="footer-copyright">&copy; 2024 nantokashiyomaike. All right reserved.</p>
+    </footer>
+    </div>
+
+</body>
+</html>
