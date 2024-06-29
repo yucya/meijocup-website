@@ -18,9 +18,13 @@
 <body>
     
     <!-- ここはヘッダーについて書く -->
+    <header>
     <div class="header">
         <img src="website-images/MEIJO CUP (1)-modified.png" alt="ロゴ" class="header-icon">
-        <span class="icon-name">Meijo CUP</span>
+        <a class="icon-name" href="#">Meijo CUP</a>
+        <div class="top-button-container">
+          <a class="top-button">トップへ戻る</a>
+        </div>
     </div>
 
     <!-- ここは上部のグローバルナビについて書く -->
@@ -52,64 +56,52 @@
             </li>
         </ul>
     </nav>
+    </header>
 
     <!-- ここはスライドショーの部分 -->
+    <main>
     <div id="slideshow-container" >
     <div id="slideshow">
         <div id="slide1" class="slide active">
-            <img src="website-images/sample1.JPG" alt="Image 1">
+            <img src="website-images/pct3.JPG" alt="Image 1">
             <div class="slide-text">
                 <h2>第2回名城CUP</h2>
                 <h2>開催決定!</h2>
                 <h3><p>2024年10月12日(土)</p></h3>
                 <div class="slide-button-container">
-                  <a href="https://www.meijo-u.ac.jp/" class="slide-button">エントリーはこちら！</a> <!-- 横に応募フォームのリンクを貼る -->
+                  <span href="https://www.meijo-u.ac.jp/" class="slide-button">エントリーはこちら！</span> <!-- 横に応募フォームのリンクを貼る -->
                 </div>
             </div>
         </div>
         <div id="slide2" class="slide">
-            <img src="website-images/sample2.jpg" alt="Image 2">
+            <img src="website-images/pct7.jpg" alt="Image 2">
             <div class="slide-text">
                 <h2>第2回名城CUP</h2>
                 <h2>開催決定!</h2>
                 <h3><p>2024年10月12日(土)</p></h3>
                 <div class="slide-button-container">
-                    <a href="https://www.meijo-u.ac.jp/" class="slide-button">エントリーはこちら！</a> <!-- 横に応募フォームのリンクを貼る -->
+                    <span href="https://www.meijo-u.ac.jp/" class="slide-button">エントリーはこちら！</span> <!-- 横に応募フォームのリンクを貼る -->
                 </div>
             </div>
         </div>
         <div id="slide3" class="slide">
-            <img src="website-images/sample3.jpg" alt="Image 3">
+            <img src="website-images/pct9.jpg" alt="Image 3">
             <div class="slide-text">
                 <h2>第2回名城CUP</h2>
                 <h2>開催決定!</h2>
                 <h3><p>2024年10月12日(土)</p></h3>
                 <div class="slide-button-container">
-                  <a href="https://www.meijo-u.ac.jp/" class="slide-button">エントリーはこちら！</a> <!-- 横に応募フォームのリンクを貼る -->
+                  <span href="https://www.meijo-u.ac.jp/" class="slide-button">エントリーはこちら！</span> <!-- 横に応募フォームのリンクを貼る -->
                 </div>
             </div>
         </div>
     </div>
     </div>
 
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('#slideshow .slide');
-        const slideInterval = setInterval(nextSlide,6000); //6秒間隔で切り替わる
-        
-        function nextSlide() {
-    　　　　slides[currentSlide].className = 'slide';
-    　　　　currentSlide = (currentSlide+1)%slides.length;
-    　　　　setTimeout(function() {  /* 透明度の変化が終わった後にアクティブなスライドを切り替える */
-        　　　　slides[currentSlide].className = 'slide active';
-    　　　　}, -200);  /* 0.2秒前からアクティブなスライドを切り替える */
-　　　　}
-    </script>
-
     <!-- ここはひとことコメントを書く -->
     <div id="text-container">
             こちらは名城大学の学生団体「<b>なんとかしよまいけ</b>」が主催するキッズランバイク大会「名城CUP」の第2回大会について情報を発信するホームページです。
-        <br><b>※エントリー開始時期は<b style="color:red;">7月末頃</b>を予定しております。続報にご期待ください！</b></div>
+        <br><b>※エントリー開始時期は<b style="color:red;">7月15日（月）</b>を予定しております。続報にご期待ください！</b></div>
     </div>
 
     <!-- ここは最新のニュースについて書く※上から追加すればOK! -->
@@ -137,7 +129,9 @@
     </div>
 
     <!-- ここは名城CUP紹介画像を貼り付ける -->
-    <img src="website-images/ボラ協　環境イラスト　2023.jpg"  alt="PDF Image" style="width:100%; height:auto; margin-top:6%; margin-bottom:-1%;">
+    <div class="charm">
+      <img src="website-images/ボラ協　環境イラスト　2023.jpg"  alt="PDF Image">
+    </div>
 
     <!-- ここはエントリーボタンについて書く -->
     <div class="entry-button-container">
@@ -190,6 +184,7 @@
       </div>
       </a>
     </div>
+    </main>
 
     <!-- ここからsns＆フッター -->
     <div class="footer-container">
@@ -227,4 +222,19 @@
     </div>
 
 </body>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('#slideshow .slide');
+  const slideInterval = setInterval(nextSlide,6000); //6秒間隔で切り替わる
+  
+  function nextSlide() {
+　　　　slides[currentSlide].className = 'slide';
+　　　　currentSlide = (currentSlide+1)%slides.length;
+　　　　setTimeout(function() {  /* 透明度の変化が終わった後にアクティブなスライドを切り替える */
+  　　　　slides[currentSlide].className = 'slide active';
+　　　　}, -200);  /* 0.2秒前からアクティブなスライドを切り替える */
+　　　　}
+</script>
+
 </html>

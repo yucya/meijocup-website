@@ -33,11 +33,19 @@
     /*border-radius: 50%;*/
 }
 .icon-name{
+  text-decoration: none;
   color: #ffffff;
   font-size: clamp(10px, 4vw, 45px);
   font-weight:bold;
   padding-left: 1.5vw;
 }
+.top-button-container{
+  
+}
+.top-button{
+  
+}
+
 /*グローバルナビについて*/
 .nav__menu {
     list-style: none;
@@ -296,6 +304,16 @@
     background-color:#666;
   }
 
+  /* ここは名城カップ魅力画像について */
+  .charm{
+    text-align: center;
+  }
+  .charm img{
+    width: 60%;
+    height: auto;
+
+  }
+
   /*ここは画像下エントリーボタンについて*/
 .entry-button-container{
     display: flex;
@@ -347,7 +365,7 @@
 .intro-title{
   width: 90%;
   margin: 1vw auto 1vw;
-  font-size: 5vw;
+  font-size: 4vw;
   text-align: left;
   position: relative;
   padding-left: 5vw;
@@ -366,7 +384,7 @@
 
 .container{
   width: 90%;
-  margin:3vw auto 10vw;
+  margin:3vw auto 4vw;
 }
 
 /*----------紹介(左文章、右写真の配置)----------*/
@@ -379,6 +397,8 @@
 .text{
   width: 45%;
   font-size: 3vw;
+  text-align: justify;
+  word-break: break-all;
 }
 
 .image{
@@ -388,6 +408,7 @@
 .image img{
   width: 100%;
   height: auto;
+  border-radius: 3vw;
 }
 
 /*----------紹介(左写真、右文章の配置)----------*/
@@ -400,7 +421,9 @@
 
 .text{
   width: 45%;
-  font-size: 3vw;
+  font-size: 2.7vw;
+  text-align: justify;
+  word-break: break-all;
 }
 
 .image{
@@ -527,6 +550,10 @@
 .sns-link{
   text-decoration: none;
 }
+.sns-link:hover{
+  text-decoration: underline;
+  text-decoration-color: black;
+}
 .sns-item{
   display: flex;
   align-items: center;
@@ -535,7 +562,7 @@
   border: 0.2vw solid;
   border-color: #cccbcb;
   font-size: 2vw;
-  color: #636060;
+  color: black;
   font-weight: bold;
   background-color: #fff;
 }
@@ -596,14 +623,16 @@ footer{
 }
 
 /* ニュースページに関する内容 */
+.news-page-container{
+  text-align: center;
+}
 .news-image{
-  width: 90%;
-  margin-left:5%;
+  width: 65%;
   border-radius: 2vw;
 }
 .news-text{
   margin: 5vw;
-  font-size:150%;
+  font-size:3vw;
   text-align: justify;
   word-wrap: break-word;
   word-break: break-all;
