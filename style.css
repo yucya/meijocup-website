@@ -24,6 +24,7 @@
 .header {
     display:flex;
     align-items:center;
+    justify-content:space-between;
     padding: 1vw 2vw;
     background-color: #b71c1c;
 }
@@ -39,11 +40,21 @@
   font-weight:bold;
   padding-left: 1.5vw;
 }
+.left-header-content{
+  display: flex;
+  align-items: center;
+}
 .top-button-container{
   
 }
+.top-button:hover{
+  text-decoration:underline;
+}
 .top-button{
-  
+  text-decoration:none;
+  color: #ffffff;
+  font-size: clamp(10px, 2vw, 20px);
+  font-weight: bold;
 }
 
 /*グローバルナビについて*/
