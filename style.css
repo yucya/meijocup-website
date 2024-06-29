@@ -1,4 +1,7 @@
 @charset "UTF-8";
+body{
+  font-family: 'Meiryo', 'Hiragino Kaku Gothic ProN', sans-serif;
+}
 /*通常時の見出しと本文について(これをもとに他の見出し等を作成してもよい)*/
 .headline{   /*これは見出し,デザインは要検討*/
   width: 90%;
