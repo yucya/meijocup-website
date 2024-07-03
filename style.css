@@ -786,13 +786,18 @@ th{
 }
 .buttons button{
   margin: 2vw;
-  padding: 2vw 4vw;
+  padding: 2vw 7vw;
   display: inline-block;
   font-weight: bold;
   background-color: white;
   color: black;
   border: 1px solid;
   transition: background-color 0.3s;
+}
+@media(max-width:450px){
+  .buttons button{
+    padding: 2vw 4vw;
+  }
 }
 .buttons button:hover{
   background-color: black;
@@ -811,6 +816,16 @@ th{
   border: 1px solid black;
   padding: 2vw;
   margin: 0 10vw;
+}
+.regulation-text img{
+  width: 100%;
+  height: auto;
+}
+@media(min-width: 450px){
+  .regulation-text img{
+    width: 50%;
+    height: auto;
+  }
 }
 
 /* 試合結果に関するcss */
