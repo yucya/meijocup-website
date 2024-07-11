@@ -47,9 +47,6 @@ body{
   display: flex;
   align-items: center;
 }
-.top-button-container{
-  
-}
 .top-button:hover{
   text-decoration:underline;
 }
@@ -608,6 +605,13 @@ footer{
 .footer-text{
   font-size: 1.7vw;
 }
+.privacy{
+  color: white;
+}
+.privacy:hover{
+  color: #969696;
+  text-shadow: 0 8px 16px white;
+}
 .footer-copyright{
   position: absolute;
   right: 3vw;
@@ -646,10 +650,15 @@ footer{
 }
 .news-text{
   margin: 5vw;
-  font-size:3vw;
+  font-size: 2vw;
   text-align: justify;
   word-wrap: break-word;
   word-break: break-all;
+}
+@media(max-width: 450px){
+  .news-text{
+    font-size: 3vw;
+  }
 }
 .renewal{
   text-align: right;
