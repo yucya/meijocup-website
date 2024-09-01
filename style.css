@@ -318,6 +318,7 @@ body{
   /* ここは名城カップ魅力画像について */
   .charm{
     text-align: center;
+    padding-top: 5%;
   }
   .charm img{
     width: 60%;
